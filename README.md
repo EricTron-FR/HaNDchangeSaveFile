@@ -10,6 +10,8 @@ You can download the .exe in the dist folder. Or execute as a python program iif
 - Select the first file is the save you want to apply.
 - Select the second file you want to overwrite.
 
+![](https://github.com/Erryon/HaNDchangeSaveFile/blob/main/handfilechange.gif)
+
 Click on validate to overwrite.
 
 # CAREFUL FOR NOW THEIR IS NO CONTROL ON WHAT YOU OVERWRITE
