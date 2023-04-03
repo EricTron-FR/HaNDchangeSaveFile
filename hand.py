@@ -1,5 +1,7 @@
 import tkinter as tk
 from tkinter import filedialog
+from PIL import Image, ImageTk
+
 
 # Define the function to select the first file
 def select_file1():
@@ -27,6 +29,20 @@ def validate():
 # Create a tkinter window
 window = tk.Tk()
 window.title("HaND change save file")
+
+window.iconbitmap('images/ico.ico')
+
+# Load and resize the header image
+header_image = Image.open('images/mi.jpg')
+header_width, header_height = header_image.size
+if header_width > 800:
+    header_image = header_image.resize((800, int(header_height * (800 / header_width))))
+header_photo = ImageTk.PhotoImage(header_image)
+
+# Add a header image to the window
+header_label = tk.Label(window, image=header_photo)
+header_label.pack(pady=10)
+
 
 # Add widgets to select two files
 file1_button = tk.Button(window, text="Select the save file", command=select_file1)
